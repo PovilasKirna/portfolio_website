@@ -29,16 +29,6 @@ import {
 const Page = () => {
 	return (
 		<Container>
-			{/* <Box
-				borderRadius="lg"
-				bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-				mb={6}
-				p={3}
-				align="center"
-			>
-				Hello, I&apos;m a university student &amp; self taught developer based
-				in Germany!
-			</Box> */}
 			<Box display={{ md: "flex" }}>
 				<Box flexGrow={1}>
 					<Heading as="h2" variant="page-title">
