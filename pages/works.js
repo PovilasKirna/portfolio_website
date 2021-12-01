@@ -6,6 +6,9 @@ import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png"
 const Works = () => {
 	return (
 		<Container>
+			<head>
+				<title> Povilas Kirna - Works</title>
+			</head>
 			<Heading as="h3" fontSize={20} mb={4} variant="page-title">
 				Works
 			</Heading>

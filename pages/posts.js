@@ -13,6 +13,9 @@ import Section from "../components/section";
 const Posts = () => {
 	return (
 		<Container>
+			<head>
+				<title> Povilas Kirna - Posts</title>
+			</head>
 			<Heading as="h3" fontSize={20} mb={4} variant="page-title">
 				Posts
 			</Heading>

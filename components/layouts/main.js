@@ -8,7 +8,6 @@ const Main = ({ children, router }) => {
 		<Box as="main" pb={8}>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title> Povilas Kirna - Homepage</title>
 				<link
 					rel="icon"
 					type="image/png"

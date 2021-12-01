@@ -29,6 +29,9 @@ import {
 const Page = () => {
 	return (
 		<Container>
+			<head>
+				<title> Povilas Kirna - Homepage</title>
+			</head>
 			<Box display={{ md: "flex" }}>
 				<Box flexGrow={1}>
 					<Heading as="h2" variant="page-title">
