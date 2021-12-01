@@ -9,10 +9,14 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import Section from "../components/section";
+import Head from "next/head";
 
 const NotFound = () => {
 	return (
 		<Container>
+			<Head>
+				<title> 404 - Not Found</title>
+			</Head>
 			<Heading as="h1">Not Found</Heading>
 			<Section delay={0.1}>
 				<Text>

@@ -2,14 +2,14 @@ import { Heading, Container, SimpleGrid, Divider } from "@chakra-ui/react";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png";
-import head from "next/head";
+import Head from "next/head";
 
 const Works = () => {
 	return (
 		<Container>
-			<head>
+			<Head>
 				<title> Povilas Kirna - Works</title>
-			</head>
+			</Head>
 			<Heading as="h3" fontSize={20} mb={4} variant="page-title">
 				Works
 			</Heading>

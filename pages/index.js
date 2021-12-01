@@ -17,7 +17,7 @@ import Paragraph from "../components/paragraph";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
 import { GridItem } from "../components/grid-item";
-import head from "next/head";
+import Head from "next/head";
 
 import {
 	IoLogoDiscord,
@@ -30,9 +30,9 @@ import {
 const Page = () => {
 	return (
 		<Container>
-			<head>
+			<Head>
 				<title> Povilas Kirna - Homepage</title>
-			</head>
+			</Head>
 			<Box display={{ md: "flex" }}>
 				<Box flexGrow={1}>
 					<Heading as="h2" variant="page-title">
