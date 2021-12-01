@@ -9,6 +9,7 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import Section from "../components/section";
+import head from "next/head";
 
 const Posts = () => {
 	return (

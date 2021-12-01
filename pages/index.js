@@ -17,6 +17,7 @@ import Paragraph from "../components/paragraph";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
 import { GridItem } from "../components/grid-item";
+import head from "next/head";
 
 import {
 	IoLogoDiscord,

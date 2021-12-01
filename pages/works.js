@@ -2,6 +2,7 @@ import { Heading, Container, SimpleGrid, Divider } from "@chakra-ui/react";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png";
+import head from "next/head";
 
 const Works = () => {
 	return (
