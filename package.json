@@ -1,4 +1,7 @@
 {
+  "name": "portfolio",
+  "version": "0.1.0",
+  "homepage": "http://povilaskirna.com",
   "private": true,
   "scripts": {
     "dev": "next dev",
