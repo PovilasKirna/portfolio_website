@@ -2,12 +2,15 @@
   "name": "portfolio",
   "version": "0.1.0",
   "homepage": "http://povilaskirna.com",
+  "description": "Povilas' portfolio website",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "author": "Povilas Kirna<povilas.kirna@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.2",
