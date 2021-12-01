@@ -108,7 +108,10 @@ const Page = () => {
 					I ♥
 				</Heading>
 				I Love Video Games,{" "}
-				<Link href="https://www.youtube.com/channel/UChTGJ-7Sf-Xb4GXnYE7XhIg">
+				<Link
+					href="https://www.youtube.com/channel/UChTGJ-7Sf-Xb4GXnYE7XhIg"
+					target="_blank"
+				>
 					Creating Content
 				</Link>
 				, Music, Going To The Gym, Cars.
