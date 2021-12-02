@@ -1,6 +1,6 @@
 # Povilas Kirna Portfolio Website
 
-This repository hosts my personal portfolio website.
+This repository hosts my personal portfolio website. Inspired by Takuya Matsuyama @craftzdog
 
 The root directory:
 
