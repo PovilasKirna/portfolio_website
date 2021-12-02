@@ -37,6 +37,10 @@ const LinkItem = ({ href, path, children }) => {
 						? useColorModeValue("whiteAlpha.900", "gray200")
 						: inactiveColor
 				}
+				_hover={{
+					bg: `${useColorModeValue("purple.500", "orange.200")}`,
+					color: `${useColorModeValue("whiteAlpha.900", "gray200")}`,
+				}}
 			>
 				{children}
 			</Link>
