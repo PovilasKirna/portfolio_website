@@ -6,19 +6,19 @@ import {
 	useColorModeValue,
 	Link,
 	Button,
-	SimpleGrid,
 	List,
 	ListItem,
-	Icon,
+	Divider,
 } from "@chakra-ui/react";
-import Layout from "../components/layouts/article";
 import NextLink from "next/link";
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
+import Layout from "../components/layouts/article";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
+import SkillsPanel from "../components/skills";
+import Contact from "../components/contact";
 import Head from "next/head";
-
 import {
 	IoLogoDiscord,
 	IoLogoGithub,
@@ -119,6 +119,36 @@ const Page = () => {
 				</Section>
 				<Section delay={2.5}>
 					<Heading as="h3" variant="section-title">
+						My skills
+					</Heading>
+					<SkillsPanel
+						title="Languages"
+						skillList={[
+							{ name: "Python", skillLevel: 4 },
+							{ name: "C++", skillLevel: 3 },
+							{ name: "JS", skillLevel: 2 },
+							{ name: "Java", skillLevel: 2 },
+						]}
+					/>
+					<Divider my={6} />
+					<SkillsPanel
+						title="Frameworks"
+						skillList={[
+							{ name: "React", skillLevel: 2 },
+							{ name: "Next.JS", skillLevel: 2 },
+							{ name: "Flask", skillLevel: 4 },
+						]}
+					/>
+					<Divider my={6} />
+					<Paragraph>
+						If you want to know more about my skills check out{" "}
+						<Link href="/works">My portfolio</Link> and don't hesitate to
+						contact me.
+					</Paragraph>
+				</Section>
+
+				<Section delay={3.3}>
+					<Heading as="h3" variant="section-title">
 						Let&apos;s connect
 					</Heading>
 					<List>
@@ -184,6 +214,12 @@ const Page = () => {
 							</Link>
 						</ListItem>
 					</List>
+				</Section>
+				<Section delay={4.1}>
+					<Heading as="h3" variant="section-title">
+						Contact me
+					</Heading>
+					<Contact />
 				</Section>
 			</Container>
 		</Layout>

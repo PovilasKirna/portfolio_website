@@ -16,18 +16,22 @@ import {
 	Button,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { IoLogoGithub } from "react-icons/io5";
 import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, children }) => {
 	const active = path === href;
 	const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
 	return (
-		<NextLink href={href}>
-			<Button
+		<NextLink href={href} passHref>
+			<Link
 				p={2}
-				colorScheme={
-					active ? useColorModeValue("purple", "orange") : "#0000ffff"
-				}
+				display="inline-flex"
+				alignItems="center"
+				style={{ gap: 4 }}
+				pl={2}
+				bg={active ? useColorModeValue("purple.500", "orange.200") : undefined}
+				borderRadius={6}
 				color={
 					active
 						? useColorModeValue("whiteAlpha.900", "gray200")
@@ -35,7 +39,7 @@ const LinkItem = ({ href, path, children }) => {
 				}
 			>
 				{children}
-			</Button>
+			</Link>
 		</NextLink>
 	);
 };
@@ -77,6 +81,13 @@ const Navbar = (props) => {
 					<LinkItem href="/posts" path={path}>
 						Posts
 					</LinkItem>
+					<LinkItem
+						target="_blank"
+						href="https://github.com/PovilasKirna/portfolio_website"
+					>
+						<IoLogoGithub />
+						Source
+					</LinkItem>
 				</Stack>
 
 				<Box flex={1} align="right">
@@ -99,6 +110,12 @@ const Navbar = (props) => {
 								<NextLink href="/posts" passHref>
 									<MenuItem as={Link}>Posts</MenuItem>
 								</NextLink>
+								<MenuItem
+									as={Link}
+									href="https://github.com/PovilasKirna/portfolio_website"
+								>
+									View Source
+								</MenuItem>
 							</MenuList>
 						</Menu>
 					</Box>
