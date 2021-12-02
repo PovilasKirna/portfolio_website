@@ -126,7 +126,7 @@ const Page = () => {
 						skillList={[
 							{ name: "Python", skillLevel: 4 },
 							{ name: "C++", skillLevel: 3 },
-							{ name: "JS", skillLevel: 2 },
+							{ name: "JavaScript", skillLevel: 2 },
 							{ name: "Java", skillLevel: 2 },
 						]}
 					/>
