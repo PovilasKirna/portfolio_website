@@ -93,7 +93,7 @@ const Page = () => {
 					<BioSection>
 						<BioYear>2019</BioYear>
 						Attended International Baccalaureate with HL subjects Computer
-						Science, Math, Lithuanian Language.
+						Science, Math, English Language.
 					</BioSection>
 					<BioSection>
 						<BioYear>2021</BioYear>
