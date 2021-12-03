@@ -117,7 +117,7 @@ const Page = () => {
 					</Link>
 					, Music, Going To The Gym, Cars.
 				</Section>
-				<Section delay={2.5}>
+				<Section delay={2.5} fontSize="sm">
 					<Heading as="h3" variant="section-title">
 						My skills
 					</Heading>

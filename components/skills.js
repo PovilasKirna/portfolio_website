@@ -2,21 +2,13 @@ import { Box, Grid, GridItem } from "@chakra-ui/layout";
 import { StarIcon } from "@chakra-ui/icons";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
-const Skill = ({ name, skillLevel }) => {
-	return (
-		<Box w="100%" h="10" bg="blue.500" key={name}>
-			{name}
-		</Box>
-	);
-};
-
 const SkillsPanel = ({ title, skillList }) => {
 	return (
 		<Box>
 			<Grid
 				templateRows={`repeat(${skillList.length}, 1fr)`}
 				templateColumns="repeat(5, 1fr)"
-				gap={2}
+				gap={[1, 2, 2]}
 				align="center"
 			>
 				<GridItem colSpan={1} fontWeight="bold">
