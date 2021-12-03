@@ -20,13 +20,9 @@ const Work = () => {
 					<ListItem>
 						<Meta>Authors</Meta>
 						<span>
-							Povilas Kirna, Eren Kodal Remus Suciu Kieran Allan Bjorn Roubos
-							Peter Simeonov{" "}
+							Povilas Kirna, Eren Kodal, Remus Suciu, Kieran Allan, Bjorn
+							Roubos, Peter Simeonov
 						</span>
-					</ListItem>
-					<ListItem>
-						<Meta>Website</Meta>
-						<span>Not Hosted</span>
 					</ListItem>
 					<ListItem>
 						<Meta>Browsers</Meta>
@@ -47,11 +43,11 @@ const Work = () => {
 				</List>
 				<WorkImage
 					src="/images/works/exEcaTwitterDashboard.png"
-					alt="Spotify Dispay example"
+					alt="Eca twitter dashboard example"
 				/>
 				<WorkImage
 					src="/images/works/thumbEcaTwitterDashboard.png"
-					alt="Spotify Dispay login example"
+					alt="Eca twitter dashboard example"
 				/>
 			</Container>
 		</Layout>

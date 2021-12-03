@@ -4,7 +4,6 @@ import { WorkGridItem } from "../components/grid-item";
 import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png"; //done
 import thumbDiscordMusicBot from "../public/images/works/thumbDiscordMusicBot.jpg"; //done
 import thumbEcaTwitterDashboard from "../public/images/works/thumbTwitterDashboard.png"; //done
-import thumbPHPLibrary from "../public/images/works/thumbPHPLibrary.png";
 import thumbSpaceInvaders from "../public/images/works/thumbSpaceInvaders.png";
 import thumbSudoku from "../public/images/works/thumbSudoku.png";
 import Head from "next/head";
@@ -57,14 +56,6 @@ const Works = () => {
 							thumbnail={thumbDiscordMusicBot}
 						></WorkGridItem>
 						Discord bot which plays music from YouTube
-					</Section>
-					<Section delay={0.5}>
-						<WorkGridItem
-							id="PHPLibrary"
-							title="PHP Library"
-							thumbnail={thumbPHPLibrary}
-						></WorkGridItem>
-						An implementation of a Library system
 					</Section>
 					<Section delay={0.5}>
 						<WorkGridItem
