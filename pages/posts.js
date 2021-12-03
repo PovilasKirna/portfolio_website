@@ -6,6 +6,7 @@ import {
 	Container,
 	Divider,
 	Button,
+	Skeleton,
 	Tab,
 	Tabs,
 	TabList,
@@ -71,18 +72,22 @@ const Posts = () => {
 							<TabPanel>
 								<SimpleGrid columns={[1, 1, 2]} gap={6}>
 									<Section delay={0.1}>
-										<WorkGridItem
-											id="spotifyDisplay"
-											title="Spotify Display"
-											thumbnail={thumbSpotifyDisplay}
-										></WorkGridItem>
+										<Skeleton h={200}>
+											<WorkGridItem
+												id="spotifyDisplay"
+												title="Spotify Display"
+												thumbnail={thumbSpotifyDisplay}
+											></WorkGridItem>
+										</Skeleton>
 									</Section>
 									<Section delay={0.1}>
-										<WorkGridItem
-											id="ecaTwitterDashboard"
-											title="CrimeBook - Twitter Dashboard"
-											thumbnail={thumbEcaTwitterDashboard}
-										></WorkGridItem>
+										<Skeleton h={200}>
+											<WorkGridItem
+												id="ecaTwitterDashboard"
+												title="CrimeBook - Twitter Dashboard"
+												thumbnail={thumbEcaTwitterDashboard}
+											></WorkGridItem>
+										</Skeleton>
 									</Section>
 								</SimpleGrid>
 							</TabPanel>
