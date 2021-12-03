@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
+import { SiBuymeacoffee } from "react-icons/si";
 import ThemeToggleButton from "./theme-toggle-button";
 
 const LinkItem = ({ href, path, children }) => {
@@ -87,6 +88,13 @@ const Navbar = (props) => {
 					</LinkItem>
 					<LinkItem
 						target="_blank"
+						href="https://www.buymeacoffee.com/KirnaPovilas"
+					>
+						<SiBuymeacoffee />
+						Buy me a coffee
+					</LinkItem>
+					<LinkItem
+						target="_blank"
 						href="https://github.com/PovilasKirna/portfolio_website"
 					>
 						<IoLogoGithub />
@@ -114,6 +122,12 @@ const Navbar = (props) => {
 								<NextLink href="/posts" passHref>
 									<MenuItem as={Link}>Posts</MenuItem>
 								</NextLink>
+								<MenuItem
+									as={Link}
+									href="https://www.buymeacoffee.com/KirnaPovilas"
+								>
+									Buy me a coffee
+								</MenuItem>
 								<MenuItem
 									as={Link}
 									href="https://github.com/PovilasKirna/portfolio_website"

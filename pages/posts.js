@@ -72,42 +72,22 @@ const Posts = () => {
 							<TabPanel>
 								<SimpleGrid columns={[1, 1, 2]} gap={6}>
 									<Section delay={0.1}>
-										<Skeleton h={200}>
-											<WorkGridItem
-												id="spotifyDisplay"
-												title="Spotify Display"
-												thumbnail={thumbSpotifyDisplay}
-											></WorkGridItem>
-										</Skeleton>
+										<Skeleton h={200}></Skeleton>
 									</Section>
 									<Section delay={0.1}>
-										<Skeleton h={200}>
-											<WorkGridItem
-												id="ecaTwitterDashboard"
-												title="CrimeBook - Twitter Dashboard"
-												thumbnail={thumbEcaTwitterDashboard}
-											></WorkGridItem>
-										</Skeleton>
+										<Skeleton h={200}></Skeleton>
 									</Section>
 								</SimpleGrid>
 							</TabPanel>
 							<TabPanel>
-								<Section delay={0.1}>
-									<Text>
-										The page you&apos;re looking for does not exist or you
-										cannot access it.
-									</Text>
-									<Divider my={6} />
-									<Box my={6} align="center">
-										<NextLink href="/">
-											<Button
-												colorScheme={useColorModeValue("purple", "orange")}
-											>
-												Return to Homepage
-											</Button>
-										</NextLink>
-									</Box>
-								</Section>
+								<SimpleGrid columns={[1, 1, 2]} gap={6}>
+									<Section delay={0.1}>
+										<Skeleton h={200}></Skeleton>
+									</Section>
+									<Section delay={0.1}>
+										<Skeleton h={200}></Skeleton>
+									</Section>
+								</SimpleGrid>
 							</TabPanel>
 						</TabPanels>
 					</Tabs>
