@@ -189,10 +189,7 @@ const Page = () => {
 							</Link>
 						</ListItem>
 						<ListItem>
-							<Link
-								href="https://www.linkedin.com/in/povilas-k-61313a122/"
-								target="_blank"
-							>
+							<Link href="www.linkedin.com/in/KirnaPovilas" target="_blank">
 								<Button
 									variant="ghost"
 									colorScheme={useColorModeValue("purple", "orange")}
