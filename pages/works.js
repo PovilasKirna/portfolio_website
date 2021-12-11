@@ -6,6 +6,7 @@ import thumbDiscordMusicBot from "../public/images/works/thumbDiscordMusicBot.jp
 import thumbEcaTwitterDashboard from "../public/images/works/thumbTwitterDashboard.png"; //done
 import thumbSpaceInvaders from "../public/images/works/thumbSpaceInvaders.png";
 import thumbSudoku from "../public/images/works/thumbSudoku.png";
+import thumbIA from "../public/images/works/thumbIA.jpg";
 import Head from "next/head";
 import Layout from "../components/layouts/article";
 
@@ -29,7 +30,6 @@ const Works = () => {
 							title="Spotify Display"
 							thumbnail={thumbSpotifyDisplay}
 						></WorkGridItem>
-						A now playing Spotify display website
 					</Section>
 					<Section delay={0.1}>
 						<WorkGridItem
@@ -37,8 +37,13 @@ const Works = () => {
 							title="CrimeBook - Twitter Dashboard"
 							thumbnail={thumbEcaTwitterDashboard}
 						></WorkGridItem>
-						A livetime twitter dashboard which displays P2000 code tweet
-						locations on a map.
+					</Section>
+					<Section delay={0.1}>
+						<WorkGridItem
+							id="IA"
+							title="School trip document management system"
+							thumbnail={thumbIA}
+						></WorkGridItem>
 					</Section>
 				</SimpleGrid>
 
@@ -55,7 +60,6 @@ const Works = () => {
 							title="Discord Music Bot"
 							thumbnail={thumbDiscordMusicBot}
 						></WorkGridItem>
-						Discord bot which plays music from YouTube
 					</Section>
 					<Section delay={0.5}>
 						<WorkGridItem
@@ -63,7 +67,6 @@ const Works = () => {
 							title="Space Invaders"
 							thumbnail={thumbSpaceInvaders}
 						></WorkGridItem>
-						Space Invaders game
 					</Section>
 					<Section delay={0.5}>
 						<WorkGridItem
@@ -71,7 +74,6 @@ const Works = () => {
 							title="Sudoku Game"
 							thumbnail={thumbSudoku}
 						></WorkGridItem>
-						Sudoku game
 					</Section>
 				</SimpleGrid>
 			</Container>
