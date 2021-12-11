@@ -1,3 +1,12 @@
+import NextLink from "next/link";
+import Section from "../components/section";
+import Paragraph from "../components/paragraph";
+import Layout from "../components/layouts/article";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import { BioSection, BioYear } from "../components/bio";
+import SkillsPanel from "../components/skills";
+import Contact from "../components/contact";
+import Head from "next/head";
 import {
 	Container,
 	Box,
@@ -10,15 +19,6 @@ import {
 	ListItem,
 	Divider,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import Section from "../components/section";
-import Paragraph from "../components/paragraph";
-import Layout from "../components/layouts/article";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import { BioSection, BioYear } from "../components/bio";
-import SkillsPanel from "../components/skills";
-import Contact from "../components/contact";
-import Head from "next/head";
 import {
 	IoLogoDiscord,
 	IoLogoGithub,

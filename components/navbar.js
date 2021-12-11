@@ -86,7 +86,7 @@ const Navbar = (props) => {
 					<LinkItem href="/posts" path={path}>
 						Posts
 					</LinkItem>
-					<LinkItem
+					{/* <LinkItem
 						target="_blank"
 						href="https://www.buymeacoffee.com/KirnaPovilas"
 					>
@@ -99,7 +99,7 @@ const Navbar = (props) => {
 					>
 						<IoLogoGithub />
 						Source
-					</LinkItem>
+					</LinkItem> */}
 				</Stack>
 
 				<Box flex={1} align="right">
