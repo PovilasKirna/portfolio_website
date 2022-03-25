@@ -97,7 +97,7 @@ const Page = () => {
 					</BioSection>
 					<BioSection>
 						<BioYear>2021</BioYear>
-						Worked as a freelance software engineer in Syntropy.
+						Worked as a freelance software engineer at Syntropy.
 					</BioSection>
 					<BioSection>
 						<BioYear>2021 to present</BioYear>
@@ -117,7 +117,7 @@ const Page = () => {
 					</Link>
 					, Music, Going To The Gym, Cars.
 				</Section>
-				<Section delay={2.5} fontSize="sm">
+				{/* <Section delay={2.5} fontSize="sm">
 					<Heading as="h3" variant="section-title">
 						My skills
 					</Heading>
@@ -145,7 +145,7 @@ const Page = () => {
 						<Link href="/works">My portfolio</Link> and don't hesitate to
 						contact me.
 					</Paragraph>
-				</Section>
+				</Section> */}
 
 				<Section delay={3.3}>
 					<Heading as="h3" variant="section-title">

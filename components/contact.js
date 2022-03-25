@@ -34,7 +34,10 @@ function ContactForm() {
 			}}
 			onSubmit={(values, actions) => {
 				setTimeout(() => {
-					alert(JSON.stringify(values, null, 2));
+					fetch("api/mail", {
+						method: "post",
+						body: JSON.stringify(values, null, 2),
+					});
 					actions.setSubmitting(false);
 				}, 1000);
 			}}
