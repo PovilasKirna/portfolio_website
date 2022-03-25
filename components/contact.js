@@ -12,8 +12,13 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
+import { useState } from "react";
+import EmailAlert from "./EmailAlert";
+import { AnimatePresence, motion } from "framer-motion";
 
-function ContactForm() {
+function ContactForm(props) {
+	// const [display, setDisplay] = useState("none");
+	//const { isOpen, onToggle } = useDisclosure();
 	function validateName(value) {
 		let error;
 		if (!/^[A-Za-z\s]+$/.test(value)) {
@@ -40,10 +45,23 @@ function ContactForm() {
 					});
 					actions.setSubmitting(false);
 				}, 1000);
+				setDisplay("");
 			}}
 		>
 			{(props) => (
 				<Form>
+					{/* <AnimatePresence exitBeforeEnter initial={false}>
+						<motion.div
+							style={{ display: "inline-block" }}
+							key={useColorModeValue("light", "dark")}
+							initial={{ y: -20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							exit={{ y: 20, opacity: 0 }}
+							transition={{ duration: 0.2 }}
+						>
+							<EmailAlert />
+						</motion.div>
+					</AnimatePresence> */}
 					<Box
 						bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
 						padding={4}

@@ -22,10 +22,11 @@ export default (req, res) => {
 	mail
 		.send(data)
 		.then(() => {
-			res.status(200).json({ status: "Ok" });
 			console.log("Email sent");
 		})
 		.catch((error) => {
 			console.error(error);
 		});
+
+	res.status(200).json({ status: "Ok" });
 };

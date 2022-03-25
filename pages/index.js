@@ -7,6 +7,8 @@ import { BioSection, BioYear } from "../components/bio";
 import SkillsPanel from "../components/skills";
 import Contact from "../components/contact";
 import Head from "next/head";
+import EmailAlert from "../components/EmailAlert";
+import { useState } from "react";
 import {
 	Container,
 	Box,
@@ -219,7 +221,7 @@ const Page = () => {
 					<Heading as="h3" variant="section-title">
 						Contact me
 					</Heading>
-					<Contact />
+					<Contact onSubmit={(value) => setEmailAlert(value)} />
 				</Section>
 			</Container>
 		</Layout>
