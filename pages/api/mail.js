@@ -8,7 +8,7 @@ export default (req, res) => {
 	const message = `
     Name: ${body.name}\r\n
     Email: ${body.email}\r\n
-    Body: ${body.message}\r\n
+    Body: ${body.body}\r\n
     `;
 
 	const data = {
@@ -22,11 +22,10 @@ export default (req, res) => {
 	mail
 		.send(data)
 		.then(() => {
+			res.status(200).json({ status: "Ok" });
 			console.log("Email sent");
 		})
 		.catch((error) => {
 			console.error(error);
 		});
-
-	res.status(200).json({ status: "Ok" });
 };

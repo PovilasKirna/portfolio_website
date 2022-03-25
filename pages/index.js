@@ -147,7 +147,7 @@ const Page = () => {
 					</Paragraph>
 				</Section> */}
 
-				<Section delay={3.3}>
+				<Section delay={2.5}>
 					<Heading as="h3" variant="section-title">
 						Let&apos;s connect
 					</Heading>
@@ -215,7 +215,7 @@ const Page = () => {
 						</ListItem>
 					</List>
 				</Section>
-				<Section delay={4.1}>
+				<Section delay={3.3}>
 					<Heading as="h3" variant="section-title">
 						Contact me
 					</Heading>
