@@ -46,7 +46,7 @@ function ContactForm(props) {
 			onSubmit={(values, actions) => {
 				try {
 					setTimeout(() => {
-						fetch("api/mail", {
+						fetch("/api/mail", {
 							method: "post",
 							body: JSON.stringify(values, null, 2),
 						});
