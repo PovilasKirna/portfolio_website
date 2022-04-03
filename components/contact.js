@@ -13,11 +13,16 @@ import {
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
 
-import { useAlert } from "react-alert";
+const openNotification = () => {
+	notification["warning"]({
+		message: "Notification Title",
+		duration: 0,
+		description:
+			"This is the content of the notification. This is the content of the notification. This is the content of the notification.",
+	});
+};
 
 function ContactForm(props) {
-	const alert = useAlert();
-
 	function validateName(value) {
 		let error;
 		if (!/^[A-Za-z\s]+$/.test(value)) {
@@ -46,16 +51,10 @@ function ContactForm(props) {
 							body: JSON.stringify(values, null, 2),
 						});
 						actions.setSubmitting(false);
-						alert.show("Email sent!", {
-							type: "success",
-							timeout: 3000,
-						});
+						//TODO - open notification
 					}, 1000);
-				} catch {
-					alert.show("An error occured!", {
-						type: "error",
-						timeout: 5000,
-					});
+				} catch (error) {
+					console.log("Error", error);
 				}
 			}}
 		>

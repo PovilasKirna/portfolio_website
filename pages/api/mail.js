@@ -14,19 +14,22 @@ export default (req, res) => {
 	const data = {
 		to: "povilas.kirna@gmail.com",
 		from: "contact@povilaskirna.com",
-		subject: "New web form message!",
+		subject: "New contact message!",
 		text: message,
 		html: message.replace(/\r\n/g, "<br>"),
 	};
 
-	mail
-		.send(data)
-		.then(() => {
-			console.log("Email sent");
-		})
-		.catch((error) => {
+	(async () => {
+		try {
+			await mail.send(data);
+		} catch (error) {
 			console.error(error);
-		});
+
+			if (error.response) {
+				console.error(error.response.body);
+			}
+		}
+	})();
 
 	res.status(200).json({ status: "Ok" });
 };
