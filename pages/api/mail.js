@@ -22,6 +22,10 @@ export default (req, res) => {
 	(async () => {
 		try {
 			await mail.send(data);
+			res.status(200).json({
+				message: "Message sent successfully!",
+				status: "Ok",
+			});
 		} catch (error) {
 			console.error(error);
 
@@ -30,6 +34,4 @@ export default (req, res) => {
 			}
 		}
 	})();
-
-	res.status(200).json({ status: "Ok" });
 };

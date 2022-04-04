@@ -2,8 +2,12 @@ import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar.js";
 import Footer from "../footer.js";
+import { Notification } from "../notification.js";
+import { useSelector } from "react-redux";
 
 const Main = ({ children, router }) => {
+	const { showNotification } = useSelector((state) => state.notification);
+
 	return (
 		<Box as="main" pb={8}>
 			<Head>
@@ -53,6 +57,7 @@ const Main = ({ children, router }) => {
 			<Navbar path={router.asPath} />
 
 			<Container maxW="container.md" pt={14}>
+				<Notification showNotification={showNotification} />
 				{children}
 			</Container>
 			<Footer />

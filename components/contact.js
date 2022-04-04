@@ -12,17 +12,12 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
-
-const openNotification = () => {
-	notification["warning"]({
-		message: "Notification Title",
-		duration: 0,
-		description:
-			"This is the content of the notification. This is the content of the notification. This is the content of the notification.",
-	});
-};
+import { useDispatch } from "react-redux";
+import { show } from "../redux/features/notificationSlice";
 
 function ContactForm(props) {
+	const dispatch = useDispatch();
+
 	function validateName(value) {
 		let error;
 		if (!/^[A-Za-z\s]+$/.test(value)) {
@@ -51,9 +46,18 @@ function ContactForm(props) {
 							body: JSON.stringify(values, null, 2),
 						});
 						actions.setSubmitting(false);
-						//TODO - open notification
+						dispatch(
+							show({
+								Title: "Success",
+								Description: "Your message has been sent!",
+							})
+						);
 					}, 1000);
 				} catch (error) {
+					show({
+						Title: "Uh Oh!",
+						Description: "Something went wrong, please try again later.",
+					});
 					console.log("Error", error);
 				}
 			}}
