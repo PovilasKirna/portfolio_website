@@ -27,11 +27,10 @@ export default (req, res) => {
 				status: "Ok",
 			});
 		} catch (error) {
-			console.error(error);
-
-			if (error.response) {
-				console.error(error.response.body);
-			}
+			res.status(500).json({
+				message: "Internal error",
+				status: "Error",
+			});
 		}
 	})();
 };

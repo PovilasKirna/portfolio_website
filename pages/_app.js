@@ -17,6 +17,9 @@ const Website = ({ Component, pageProps, router }) => {
 					.grid-item-text {
 						text-align: center;
 					}
+					.grecaptcha-badge {
+						visibility: hidden;
+					}
 				`}</style>
 				<Layout router={router}>
 					<AnimatePresence exitBeforeEnter initial={true}>

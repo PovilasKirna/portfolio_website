@@ -14,9 +14,12 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { show } from "../redux/features/notificationSlice";
+import { useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactForm(props) {
 	const dispatch = useDispatch();
+	const recaptchaRef = useRef(null);
 
 	function validateName(value) {
 		let error;
@@ -38,32 +41,67 @@ function ContactForm(props) {
 				email: "",
 				body: "",
 			}}
-			onSubmit={(values, actions) => {
-				try {
-					setTimeout(() => {
-						fetch("/api/mail", {
+			onSubmit={async (values, actions) => {
+				const token = await recaptchaRef.current?.executeAsync();
+
+				const response = await fetch("/api/auth", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						token,
+					}),
+				});
+				recaptchaRef.current.reset();
+				console.log("Verification done");
+				console.log(response);
+
+				if (response.ok) {
+					setTimeout(async () => {
+						const response = await fetch("/api/mail", {
 							method: "post",
 							body: JSON.stringify(values, null, 2),
+							token,
 						});
+						const data = await response.json();
+						if (data.status === "Ok") {
+							dispatch(
+								show({
+									Title: "Success",
+									Description: "Your message has been sent!",
+								})
+							);
+						} else {
+							dispatch(
+								show({
+									Title: "Uh Oh!",
+									Description: "Something went wrong, please try again later.",
+								})
+							);
+						}
 						actions.setSubmitting(false);
+					}, 1000);
+				} else {
+					setTimeout(async () => {
 						dispatch(
 							show({
-								Title: "Success",
-								Description: "Your message has been sent!",
+								Title: "Beep Boop",
+								Description: "I know you're a robot!",
 							})
 						);
+						actions.setSubmitting(false);
 					}, 1000);
-				} catch (error) {
-					show({
-						Title: "Uh Oh!",
-						Description: "Something went wrong, please try again later.",
-					});
-					console.log("Error", error);
 				}
 			}}
 		>
 			{(props) => (
 				<Form>
+					<ReCAPTCHA
+						ref={recaptchaRef}
+						sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+						size="invisible"
+					/>
 					<Box
 						bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
 						padding={4}
