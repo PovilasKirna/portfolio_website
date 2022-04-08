@@ -12,8 +12,9 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { Formik, Form, Field } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { show } from "../redux/features/notificationSlice";
+//import { send, timeout } from "../redux/features/emailSlice";
 import { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -55,7 +56,6 @@ function ContactForm(props) {
 				});
 				recaptchaRef.current.reset();
 				console.log("Verification done");
-				console.log(response);
 
 				if (response.ok) {
 					setTimeout(async () => {
@@ -81,6 +81,8 @@ function ContactForm(props) {
 							);
 						}
 						actions.setSubmitting(false);
+						//const time = Date.now();
+						//dispatch(send(time));
 					}, 1000);
 				} else {
 					setTimeout(async () => {
@@ -185,6 +187,7 @@ function ContactForm(props) {
 									rightIcon={<ChevronRightIcon />}
 									colorScheme={useColorModeValue("purple", "orange")}
 									isLoading={props.isSubmitting}
+									//isDisabled={useSelector((state) => state.email.sent)}
 									type="submit"
 								>
 									Send
