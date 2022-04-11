@@ -122,7 +122,7 @@ const Navbar = (props) => {
 								<NextLink href="/posts" passHref>
 									<MenuItem as={Link}>Posts</MenuItem>
 								</NextLink>
-								<MenuItem
+								{/* <MenuItem
 									as={Link}
 									href="https://www.buymeacoffee.com/KirnaPovilas"
 								>
@@ -133,7 +133,7 @@ const Navbar = (props) => {
 									href="https://github.com/PovilasKirna/portfolio_website"
 								>
 									View Source
-								</MenuItem>
+								</MenuItem> */}
 							</MenuList>
 						</Menu>
 					</Box>
