@@ -9,6 +9,7 @@ import thumbSudoku from "../public/images/works/thumbSudoku.png";
 import thumbIA from "../public/images/works/thumbIA.jpg";
 import Head from "next/head";
 import Layout from "../components/layouts/article";
+import thumbWeatherAPI from "../public/images/works/thumbWeatherAPI.png";
 
 const Works = () => {
 	return (
@@ -43,6 +44,13 @@ const Works = () => {
 							id="IA"
 							title="School trip document management system"
 							thumbnail={thumbIA}
+						></WorkGridItem>
+					</Section>
+					<Section delay={0.1}>
+						<WorkGridItem
+							id="weatherAPI"
+							title="Weather API website"
+							thumbnail={thumbWeatherAPI}
 						></WorkGridItem>
 					</Section>
 				</SimpleGrid>

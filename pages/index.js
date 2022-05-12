@@ -6,7 +6,6 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 import { BioSection, BioYear } from "../components/bio";
 import Contact from "../components/contact";
 import Head from "next/head";
-import { Notification } from "../components/notification";
 
 import {
 	Container,
@@ -28,10 +27,7 @@ import {
 	IoLogoTwitter,
 } from "react-icons/io5";
 
-import { useState } from "react";
-
 const Page = () => {
-	const [showNotification, setNotification] = useState(true);
 	return (
 		<Layout>
 			<Container>
