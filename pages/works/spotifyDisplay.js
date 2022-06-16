@@ -9,41 +9,43 @@ const Work = () => {
 		<Layout title="Spotify Display">
 			<Container>
 				<Title>
-					Spotify Display <Badge>2021</Badge>
+					Spotify Dashboard <Badge>2021-2022</Badge>
 				</Title>
-				<P>A website which display your currently playing song on Spotify.</P>
+				<P>
+					A website which display your currently playing song on Spotify and
+					finds matching lyrics if you feel like karaoke night.
+				</P>
 				<List ml={4} my={4}>
-					<ListItem>
-						<Meta>Website</Meta>
-						<Link href="https://spotify-display.povilaskirna.com">
-							https://spotify-display.povilaskirna.com{" "}
-							<ExternalLinkIcon mx="2px" />
-						</Link>
-					</ListItem>
 					<ListItem>
 						<Meta>Browsers</Meta>
 						<span>Chrome/Safari/Firefox/Opera/Edge</span>
 					</ListItem>
 					<ListItem>
 						<Meta>Stack</Meta>
-						<span>Next.JS, React, TailwindCSS, Spotify Web API</span>
+						<span>
+							Express.JS, React, TailwindCSS, Spotify Web API, Genius API
+						</span>
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/spotify-display">
+						<Link href="https://github.com/PovilasKirna/spotify-dashboard">
 							{" "}
-							https://github.com/PovilasKirna/spotify-display{" "}
+							https://github.com/PovilasKirna/spotify-dashboard{" "}
 							<ExternalLinkIcon mx="2px" />
 						</Link>
 					</ListItem>
 				</List>
 				<WorkImage
-					src="/images/works/exSpotifyDisplay.png"
-					alt="Spotify Dispay example"
+					src="/images/works/login.png"
+					alt="Spotify Dispay login example"
 				/>
 				<WorkImage
-					src="/images/works/thumbSpotifyDisplay.png"
-					alt="Spotify Dispay login example"
+					src="/images/works/search.png"
+					alt="Spotify Search example"
+				/>
+				<WorkImage
+					src="/images/works/lyrics.png"
+					alt="Spotify Lyrics example"
 				/>
 			</Container>
 		</Layout>
