@@ -10,6 +10,7 @@ import thumbIA from "../public/images/works/thumbIA.jpg";
 import Head from "next/head";
 import Layout from "../components/layouts/article";
 import thumbWeatherAPI from "../public/images/works/thumbWeatherAPI.png";
+import startPageSpeedTest from "../public/images/works/thumbSpeedtest.png";
 
 const Works = () => {
 	return (
@@ -51,6 +52,13 @@ const Works = () => {
 							id="weatherAPI"
 							title="Weather API website"
 							thumbnail={thumbWeatherAPI}
+						></WorkGridItem>
+					</Section>
+					<Section delay={0.1}>
+						<WorkGridItem
+							id="speedTest"
+							title="Typing speed game website"
+							thumbnail={startPageSpeedTest}
 						></WorkGridItem>
 					</Section>
 				</SimpleGrid>

@@ -12,7 +12,7 @@ const Work = () => {
 					Weather API website <Badge>2022</Badge>
 				</Title>
 				<P>
-					This is a a Next.JS project for simple API usage. You can search for
+					This is a Next.JS project for simple API usage. You can search for
 					weather conditions in a specific place, website shows a minimal clean
 					weather display.
 				</P>
