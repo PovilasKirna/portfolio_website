@@ -13,7 +13,9 @@ const Work = () => {
 				</Title>
 				<P>
 					A website which display your currently playing song on Spotify and
-					finds matching lyrics if you feel like karaoke night.
+					finds matching lyrics if you feel like karaoke night. This website
+					also works as a web-player, after logging in you can search, play and
+					like songs on the website.
 				</P>
 				<List ml={4} my={4}>
 					<ListItem>
