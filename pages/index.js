@@ -72,7 +72,7 @@ const Page = () => {
 						partying with his friends.
 					</Paragraph>
 					<Box align="center" my={4}>
-						<NextLink href="/works">
+						<NextLink href="/projects">
 							<Button
 								rightIcon={<ChevronRightIcon />}
 								colorScheme={useColorModeValue("purple", "orange")}

@@ -156,6 +156,12 @@ const Posts = () => {
 									<Section delay={0.1}>
 										<Skeleton h={200}></Skeleton>
 									</Section>
+									<Section delay={0.1}>
+										<Skeleton h={200}></Skeleton>
+									</Section>
+									<Section delay={0.1}>
+										<Skeleton h={200}></Skeleton>
+									</Section>
 								</SimpleGrid>
 							</TabPanel>
 						</TabPanels>

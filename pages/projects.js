@@ -2,25 +2,26 @@ import { Heading, Container, SimpleGrid, Divider } from "@chakra-ui/react";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png"; //done
-import thumbDiscordMusicBot from "../public/images/works/thumbDiscordMusicBot.jpg"; //done
 import thumbEcaTwitterDashboard from "../public/images/works/thumbTwitterDashboard.png"; //done
-import thumbSpaceInvaders from "../public/images/works/thumbSpaceInvaders.png";
-import thumbSudoku from "../public/images/works/thumbSudoku.png";
 import thumbIA from "../public/images/works/thumbIA.jpg";
 import Head from "next/head";
 import Layout from "../components/layouts/article";
 import thumbWeatherAPI from "../public/images/works/thumbWeatherAPI.png";
 import startPageSpeedTest from "../public/images/works/thumbSpeedtest.png";
+import shotmaniacsThumb from "../public/images/works/shotmaniacsThumb.png";
+// import thumbDiscordMusicBot from "../public/images/works/thumbDiscordMusicBot.jpg"; //done
+// import thumbSpaceInvaders from "../public/images/works/thumbSpaceInvaders.png";
+// import thumbSudoku from "../public/images/works/thumbSudoku.png";
 
 const Works = () => {
 	return (
 		<Layout>
 			<Container>
 				<Head>
-					<title> Povilas Kirna - Works</title>
+					<title> Povilas Kirna - Projects</title>
 				</Head>
 				<Heading as="h3" fontSize={20} mb={4} variant="page-title">
-					Works
+					Projects
 				</Heading>
 
 				<Divider my={6} />
@@ -40,30 +41,37 @@ const Works = () => {
 							thumbnail={thumbEcaTwitterDashboard}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.1}>
+					<Section delay={0.8}>
 						<WorkGridItem
 							id="IA"
 							title="School trip document management system"
 							thumbnail={thumbIA}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.1}>
+					<Section delay={0.8}>
 						<WorkGridItem
 							id="weatherAPI"
 							title="Weather API website"
 							thumbnail={thumbWeatherAPI}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.1}>
+					<Section delay={1.5}>
 						<WorkGridItem
 							id="speedTest"
 							title="Typing speed game website"
 							thumbnail={startPageSpeedTest}
 						></WorkGridItem>
 					</Section>
+					<Section delay={1.5}>
+						<WorkGridItem
+							id="shotmaniacs"
+							title="Shotmaniacs company website"
+							thumbnail={shotmaniacsThumb}
+						></WorkGridItem>
+					</Section>
 				</SimpleGrid>
 
-				<Heading as="h3" fontSize={20} mb={4} variant="page-title">
+				{/* <Heading as="h3" fontSize={20} mb={4} variant="page-title">
 					Old Works
 				</Heading>
 
@@ -91,7 +99,7 @@ const Works = () => {
 							thumbnail={thumbSudoku}
 						></WorkGridItem>
 					</Section>
-				</SimpleGrid>
+				</SimpleGrid> */}
 			</Container>
 		</Layout>
 	);

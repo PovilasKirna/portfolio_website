@@ -13,13 +13,15 @@ const Work = () => {
 				</Title>
 				<P>
 					This is a React.JS project inspired by{" "}
-					<Link href="https://monkeytype.com">Monkeytype.com</Link> website. It
-					is a typing speed game and it is still not finished.
+					<Link href="https://monkeytype.com" isExternal>
+						Monkeytype.com
+					</Link>{" "}
+					website. It is a typing speed game and it is still not finished.
 				</P>
 				<List ml={4} my={4}>
 					<ListItem>
 						<Meta>Website</Meta>
-						<Link href="speedtest-website.vercel.app">
+						<Link href="speedtest-website.vercel.app" isExternal>
 							speedtest-website.vercel.app
 							<ExternalLinkIcon mx="2px" />
 						</Link>
