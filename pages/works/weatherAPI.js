@@ -19,7 +19,7 @@ const Work = () => {
 				<List ml={4} my={4}>
 					<ListItem>
 						<Meta>Website</Meta>
-						<Link href="https://weather-api-website.vercel.app">
+						<Link href="https://weather-api-website.vercel.app" isExternal>
 							https://weather-api-website.vercel.app{" "}
 							<ExternalLinkIcon mx="2px" />
 						</Link>
@@ -34,7 +34,10 @@ const Work = () => {
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/Weather_API_website">
+						<Link
+							href="https://github.com/PovilasKirna/Weather_API_website"
+							isExternal
+						>
 							{" "}
 							https://github.com/PovilasKirna/Weather_API_website{" "}
 							<ExternalLinkIcon mx="2px" />

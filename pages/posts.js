@@ -6,7 +6,6 @@ import {
 	Heading,
 	SimpleGrid,
 	Container,
-	Divider,
 	Button,
 	LinkBox,
 	LinkOverlay,
@@ -53,7 +52,8 @@ const Posts = () => {
 		fetchRecentBlogPosts().catch(console.error);
 	}, []);
 	const videos = useSelector((state) => state.youtube.videos);
-	const isLoaded = useSelector((state) => state.youtube.loading);
+	const loading = useSelector((state) => state.youtube.loading);
+	const delay = 0.1;
 
 	return (
 		<Layout>
@@ -104,15 +104,20 @@ const Posts = () => {
 							{/* Youtube */}
 							<TabPanel>
 								<SimpleGrid columns={[1, 1, 2]} gap={6} autoRows={true}>
-									{videos.items &&
-										videos.items.map((video) => {
+									{videos.items ? (
+										videos.items.map((video, index) => {
 											const { id, snippet } = video;
 											const { title, thumbnails = {} } = snippet;
 											const { medium = {} } = thumbnails;
 											const url = `https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}`;
+											//add delay of 0.7 to each row
+											if (index % 2 == 0 && index != 0) {
+												delay += 0.7;
+											}
+
 											return (
-												<Section delay={0.1} key={id}>
-													<Skeleton h={200} isLoaded={!isLoaded}>
+												<Section delay={delay} key={id}>
+													<Skeleton h={200} isLoaded={!loading}>
 														<Box w="100%" textAlign="center">
 															<LinkBox cursor="pointer">
 																<img
@@ -130,7 +135,23 @@ const Posts = () => {
 													</Skeleton>
 												</Section>
 											);
-										})}
+										})
+									) : (
+										<>
+											<Section delay={0.1}>
+												<Skeleton h={200}></Skeleton>
+											</Section>
+											<Section delay={0.1}>
+												<Skeleton h={200}></Skeleton>
+											</Section>
+											<Section delay={0.1}>
+												<Skeleton h={200}></Skeleton>
+											</Section>
+											<Section delay={0.1}>
+												<Skeleton h={200}></Skeleton>
+											</Section>
+										</>
+									)}
 								</SimpleGrid>
 								{videos.items && (
 									<Box align="center" my={4}>

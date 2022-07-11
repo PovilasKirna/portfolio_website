@@ -34,7 +34,10 @@ const Work = () => {
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/Twitter-dashboard-ECA">
+						<Link
+							href="https://github.com/PovilasKirna/Twitter-dashboard-ECA"
+							isExternal
+						>
 							{" "}
 							https://github.com/PovilasKirna/Twitter-dashboard-ECA{" "}
 							<ExternalLinkIcon mx="2px" />

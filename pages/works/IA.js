@@ -28,7 +28,7 @@ const Work = () => {
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/IA">
+						<Link href="https://github.com/PovilasKirna/IA" isExternal>
 							{" "}
 							https://github.com/PovilasKirna/IA
 							<ExternalLinkIcon mx="2px" />

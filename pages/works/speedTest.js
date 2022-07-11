@@ -36,7 +36,10 @@ const Work = () => {
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/speedtest-website">
+						<Link
+							href="https://github.com/PovilasKirna/speedtest-website"
+							isExternal
+						>
 							https://github.com/PovilasKirna/speedtest-website
 							<ExternalLinkIcon mx="2px" />
 						</Link>

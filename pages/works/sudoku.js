@@ -25,7 +25,10 @@ const Work = () => {
 					</ListItem>
 					<ListItem>
 						<Meta>Source</Meta>
-						<Link href="https://github.com/PovilasKirna/PythonOOP-Web-Final">
+						<Link
+							href="https://github.com/PovilasKirna/PythonOOP-Web-Final"
+							isExternal
+						>
 							https://github.com/PovilasKirna/PythonOOP-Web-Final
 							<ExternalLinkIcon mx="2px" />
 						</Link>
