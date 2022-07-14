@@ -20,12 +20,13 @@ import { IoLogoGithub } from "react-icons/io5";
 import { SiBuymeacoffee } from "react-icons/si";
 import ThemeToggleButton from "./theme-toggle-button";
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, external = false, path, children }) => {
 	const active = path === href;
 	const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
 	return (
 		<NextLink href={href} passHref>
 			<Link
+				target={external && "_blank"}
 				p={2}
 				display="inline-flex"
 				alignItems="center"
@@ -92,14 +93,10 @@ const Navbar = (props) => {
 					>
 						<SiBuymeacoffee />
 						Buy me a coffee
-					</LinkItem>
-					<LinkItem
-						target="_blank"
-						href="https://github.com/PovilasKirna/portfolio_website"
-					>
-						<IoLogoGithub />
-						Source
 					</LinkItem> */}
+					<LinkItem external href="https://github.com/PovilasKirna/">
+						<IoLogoGithub />
+					</LinkItem>
 				</Stack>
 
 				<Box flex={1} align="right">
