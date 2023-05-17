@@ -100,8 +100,12 @@ const Page = () => {
 						Worked as a freelance software engineer at Syntropy.
 					</BioSection>
 					<BioSection>
-						<BioYear>2021 to present</BioYear>
-						Studies Technical Computer Science in University of Twente.
+						<BioYear>2022 to present</BioYear>
+						Works as a computer science tutor at Alfa Klasė.
+					</BioSection>
+					<BioSection>
+						<BioYear>2022 to present</BioYear>
+						Studies Business Information Technology at the University of Twente.
 					</BioSection>
 				</Section>
 				<Section delay={1.7}>
@@ -215,12 +219,12 @@ const Page = () => {
 						</ListItem>
 					</List>
 				</Section>
-				<Section delay={3.3}>
+				{/* <Section delay={3.3}>
 					<Heading as="h3" variant="section-title">
 						Contact me
 					</Heading>
 					<Contact />
-				</Section>
+				</Section> */}
 			</Container>
 		</Layout>
 	);
