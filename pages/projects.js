@@ -2,6 +2,8 @@ import { Heading, Container, SimpleGrid, Divider } from "@chakra-ui/react";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 import thumbSpotifyDisplay from "../public/images/works/thumbSpotifyDisplay.png"; //done
+import thumbNoteBridge from "../public/images/works/notebridgelanding.png"; //done
+import thumbAer from "../public/images/works/aeraddchem.png";
 import thumbEcaTwitterDashboard from "../public/images/works/thumbTwitterDashboard.png"; //done
 import thumbIA from "../public/images/works/thumbIA.jpg";
 import Head from "next/head";
@@ -29,40 +31,55 @@ const Works = () => {
 				<SimpleGrid columns={[1, 1, 2]} gap={6}>
 					<Section delay={0.1}>
 						<WorkGridItem
+							id="notebridge"
+							title="Note-Bridge Startup"
+							thumbnail={thumbNoteBridge}
+						/>
+					</Section>
+					<Section delay={0.1}>
+						<WorkGridItem
+							id="aeronamicchemicals"
+							title="Aeronamic Chemical Manager"
+							thumbnail={thumbAer}
+						/>
+					</Section>
+
+					<Section delay={0.8}>
+						<WorkGridItem
 							id="spotifyDisplay"
 							title="Spotify Display"
 							thumbnail={thumbSpotifyDisplay}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.1}>
+					<Section delay={0.8}>
 						<WorkGridItem
 							id="ecaTwitterDashboard"
 							title="CrimeBook - Twitter Dashboard"
 							thumbnail={thumbEcaTwitterDashboard}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.8}>
+					<Section delay={1.5}>
 						<WorkGridItem
 							id="IA"
 							title="School trip document management system"
 							thumbnail={thumbIA}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.8}>
+					<Section delay={1.5}>
 						<WorkGridItem
 							id="weatherAPI"
 							title="Weather API website"
 							thumbnail={thumbWeatherAPI}
 						></WorkGridItem>
 					</Section>
-					<Section delay={1.5}>
+					<Section delay={2.2}>
 						<WorkGridItem
 							id="speedTest"
 							title="Typing speed game website"
 							thumbnail={startPageSpeedTest}
 						></WorkGridItem>
 					</Section>
-					<Section delay={1.5}>
+					<Section delay={2.2}>
 						<WorkGridItem
 							id="shotmaniacs"
 							title="Shotmaniacs company website"
