@@ -6,6 +6,7 @@ import thumbNoteBridge from "../public/images/works/notebridgelanding.png"; //do
 import thumbAer from "../public/images/works/aeraddchem.png";
 import thumbEcaTwitterDashboard from "../public/images/works/thumbTwitterDashboard.png"; //done
 import thumbIA from "../public/images/works/thumbIA.jpg";
+import thumbHCI from "../public/images/works/hcilanding.png";
 import Head from "next/head";
 import Layout from "../components/layouts/article";
 import thumbWeatherAPI from "../public/images/works/thumbWeatherAPI.png";
@@ -43,7 +44,13 @@ const Works = () => {
 							thumbnail={thumbAer}
 						/>
 					</Section>
-
+					<Section delay={0.8}>
+						<WorkGridItem
+							id="hciproject"
+							title="Van Gogh Museum Accesibility website"
+							thumbnail={thumbHCI}
+						></WorkGridItem>
+					</Section>
 					<Section delay={0.8}>
 						<WorkGridItem
 							id="spotifyDisplay"
@@ -51,7 +58,7 @@ const Works = () => {
 							thumbnail={thumbSpotifyDisplay}
 						></WorkGridItem>
 					</Section>
-					<Section delay={0.8}>
+					<Section delay={1.5}>
 						<WorkGridItem
 							id="ecaTwitterDashboard"
 							title="CrimeBook - Twitter Dashboard"
@@ -65,7 +72,7 @@ const Works = () => {
 							thumbnail={thumbIA}
 						></WorkGridItem>
 					</Section>
-					<Section delay={1.5}>
+					<Section delay={2.2}>
 						<WorkGridItem
 							id="weatherAPI"
 							title="Weather API website"
@@ -79,7 +86,7 @@ const Works = () => {
 							thumbnail={startPageSpeedTest}
 						></WorkGridItem>
 					</Section>
-					<Section delay={2.2}>
+					<Section delay={2.9}>
 						<WorkGridItem
 							id="shotmaniacs"
 							title="Shotmaniacs company website"
@@ -87,36 +94,6 @@ const Works = () => {
 						></WorkGridItem>
 					</Section>
 				</SimpleGrid>
-
-				{/* <Heading as="h3" fontSize={20} mb={4} variant="page-title">
-					Old Works
-				</Heading>
-
-				<Divider my={6} />
-
-				<SimpleGrid columns={[1, 1, 2]} gap={6}>
-					<Section delay={0.5}>
-						<WorkGridItem
-							id="discordMusicBot"
-							title="Discord Music Bot"
-							thumbnail={thumbDiscordMusicBot}
-						></WorkGridItem>
-					</Section>
-					<Section delay={0.5}>
-						<WorkGridItem
-							id="spaceInvaders"
-							title="Space Invaders"
-							thumbnail={thumbSpaceInvaders}
-						></WorkGridItem>
-					</Section>
-					<Section delay={0.5}>
-						<WorkGridItem
-							id="sudoku"
-							title="Sudoku Game"
-							thumbnail={thumbSudoku}
-						></WorkGridItem>
-					</Section>
-				</SimpleGrid> */}
 			</Container>
 		</Layout>
 	);
