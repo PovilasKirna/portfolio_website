@@ -37,13 +37,13 @@ const Works = () => {
 							thumbnail={thumbNoteBridge}
 						/>
 					</Section>
-					<Section delay={0.1}>
+					{/* <Section delay={0.1}>
 						<WorkGridItem
 							id="aeronamicchemicals"
 							title="Aeronamic Chemical Manager"
 							thumbnail={thumbAer}
 						/>
-					</Section>
+					</Section> */}
 					<Section delay={0.8}>
 						<WorkGridItem
 							id="hciproject"
